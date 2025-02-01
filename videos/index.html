@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dabaski's Videos</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .video-card {
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .video-card iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+        }
+        .video-card h3 {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<nav class="nav">
+    <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../music/index.html">Music</a></li>
+        <li><a href="index.html">Videos</a></li>
+        <li><a href="../about.html">About</a></li>
+    </ul>
+</nav>
+
+<!-- Video Content -->
+<div class="content">
+    <div id="videos">
+        <h1>Videos</h1>
+        <p>Check out my latest video content.</p>
+        <div class="video-grid">
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                <h3>Music Video 1</h3>
+                <p>Released: 2023</p>
+            </div>
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                <h3>Vlog 1</h3>
+                <p>Released: 2022</p>
+            </div>
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                <h3>Tutorial 1</h3>
+                <p>Released: 2021</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
