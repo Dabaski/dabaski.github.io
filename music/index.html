@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dabaski's Music</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .content {
+            background: transparent;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        #music {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        #music h1 {
+            color: #fff;
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        #music > p {
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .music-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .music-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .music-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .music-card-content {
+            padding: 20px;
+        }
+
+        .music-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.3rem;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .music-card p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .music-card .genre-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .music-card .listen-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .music-card .listen-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .footer-text {
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            padding: 40px 20px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-text p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .footer-text p:first-child {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+<nav class="nav">
+    <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="index.html">Music</a></li>
+        <li><a href="../videos/index.html">Videos</a></li>
+        <li><a href="../about.html">About</a></li>
+    </ul>
+</nav>
+
+<!-- Music Content -->
+<div class="content">
+    <div id="music">
+        <h1>Music</h1>
+        <p>Explore my latest tracks and albums.</p>
+        <div class="music-grid">
+            <div class="music-card">
+                <a href="https://www.youtube.com/watch?v=paEGmz3m2jo&list=OLAK5uy_nCUU5-w1fObHlRfrGywnWa-T0U26kYyQE">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02adabd3cd353846134f686676" alt="The Future Ain't So Bad">
+                </a>
+                <div class="music-card-content">
+                    <h3>The Future Ain't So Bad</h3>
+                    <p>Released: 2019</p>
+                    <span class="genre-tag">LoFi Hip Hop</span>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=paEGmz3m2jo&list=OLAK5uy_nCUU5-w1fObHlRfrGywnWa-T0U26kYyQE" class="listen-btn">Listen Now</a>
+                </div>
+            </div>
+            <div class="music-card">
+                <a href="https://www.youtube.com/watch?v=PxWj9G1E58Q&list=OLAK5uy_kbKoMdRfcQUVaPMaJavKFyqoAacuTPEc8">
+                    <img src="https://i.scdn.co/image/ab67616d00001e0207bf68907f5423a72e908cc5" alt="PROMISE ME">
+                </a>
+                <div class="music-card-content">
+                    <h3>PROMISE ME</h3>
+                    <p>Released: 2022</p>
+                    <span class="genre-tag">Dubstep / Color Bass</span>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=PxWj9G1E58Q&list=OLAK5uy_kbKoMdRfcQUVaPMaJavKFyqoAacuTPEc8" class="listen-btn">Listen Now</a>
+                </div>
+            </div>
+            <div class="music-card">
+                <a href="https://www.youtube.com/watch?v=g5qO5AZQfRo">
+                    <img src="https://i3.ytimg.com/vi/g5qO5AZQfRo/hqdefault.jpg" alt="Meet Your Maker">
+                </a>
+                <div class="music-card-content">
+                    <h3>Meet Your Maker</h3>
+                    <p>Released: 2021</p>
+                    <span class="genre-tag">Dubstep</span>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=g5qO5AZQfRo" class="listen-btn">Listen Now</a>
+                </div>
+            </div>
+            <div class="music-card">
+                <a href="https://www.youtube.com/watch?v=-tRigXCnw8M">
+                    <img src="https://i3.ytimg.com/vi/-tRigXCnw8M/hqdefault.jpg" alt="PROMISE ME (VIP)">
+                </a>
+                <div class="music-card-content">
+                    <h3>PROMISE ME (VIP)</h3>
+                    <p>Released: 2021</p>
+                    <span class="genre-tag">Dubstep</span>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=-tRigXCnw8M" class="listen-btn">Listen Now</a>
+                </div>
+            </div>
+            <div class="music-card">
+                <a href="https://www.youtube.com/watch?v=plGkVaRkm7w">
+                    <img src="https://i3.ytimg.com/vi/plGkVaRkm7w/hqdefault.jpg" alt="Dubstep Track">
+                </a>
+                <div class="music-card-content">
+                    <h3>God's Warrior - Don't Wanna Know Why (Dabaski flip)</h3>
+                    <span class="genre-tag">Dubstep</span>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=plGkVaRkm7w" class="listen-btn">Listen Now</a>
+                </div>
+            </div>
+            <div class="music-card">
+                <a href="https://www.youtube.com/watch?v=H78MWUMpMyA">
+                    <img src="https://i3.ytimg.com/vi/H78MWUMpMyA/hqdefault.jpg" alt="Dubstep Track">
+                </a>
+                <div class="music-card-content">
+                    <h3>God’s Warrior – Bounce Now (Dabaski Flip)</h3>
+                    <span class="genre-tag">Dubstep</span>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=H78MWUMpMyA" class="listen-btn">Listen Now</a>
+                </div>
+            </div>
+            <div class="music-card">
+                <a href="https://www.youtube.com/watch?v=wI21TsK9q88">
+                    <img src="https://i3.ytimg.com/vi/wI21TsK9q88/hqdefault.jpg" alt="Dubstep Track">
+                </a>
+                <div class="music-card-content">
+                    <h3>GUTTER – Grave Inside My Head (Slooby Remix) [Dabaski Flip]</h3>
+                    <span class="genre-tag">Dubstep</span>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=wI21TsK9q88" class="listen-btn">Listen Now</a>
+                </div>
+            </div>
+            <div class="music-card">
+                <a href="https://www.youtube.com/watch?v=DBv_mwddIGw">
+                    <img src="https://i3.ytimg.com/vi/DBv_mwddIGw/hqdefault.jpg" alt="Dubstep Track">
+                </a>
+                <div class="music-card-content">
+                    <h3>Track Of Time</h3>
+                    <span class="genre-tag">Dubstep</span>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=DBv_mwddIGw" class="listen-btn">Listen Now</a>
+                </div>
+            </div>
+            <div class="music-card">
+                <a href="https://www.youtube.com/watch?v=zxVDI3THdgw">
+                    <img src="https://i3.ytimg.com/vi/zxVDI3THdgw/hqdefault.jpg" alt="Dubstep Track">
+                </a>
+                <div class="music-card-content">
+                    <h3>PROMISE ME</h3>
+                    <span class="genre-tag">Dubstep</span>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=zxVDI3THdgw" class="listen-btn">Listen Now</a>
+                </div>
+            </div>
+            <div class="music-card">
+                <a href="https://www.youtube.com/watch?v=ptaYT_NC_d8">
+                    <img src="https://i3.ytimg.com/vi/ptaYT_NC_d8/hqdefault.jpg" alt="LoFi Track">
+                </a>
+                <div class="music-card-content">
+                    <h3>The Future Ain't That Bad</h3>
+                    <span class="genre-tag">LoFi</span>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=ptaYT_NC_d8" class="listen-btn">Listen Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer-text">
+    <p>AI Training Prohibited</p>
+    <p>The music featured on this page that is linked to YouTube is original and copyrighted. Unauthorized use of this music for training artificial intelligence models, datasets, or any machine learning purposes is strictly prohibited. Reproduction, distribution, or modification without explicit permission from the creator is also forbidden. All rights reserved.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dabaski - Music Producer & Artist</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .content {
+            background: transparent;
+            padding: 0;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 40px 15px 30px;
+            color: white;
+        }
+
+        .hero-section h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin: 0 0 15px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 0.8s ease-out;
+            word-wrap: break-word;
+        }
+
+        .hero-section .tagline {
+            font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1s ease-out;
+            padding: 0 10px;
+        }
+
+        .hero-section .subtitle {
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            margin-bottom: 25px;
+            color: rgba(255, 255, 255, 0.85);
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+            gap: 20px;
+            padding: 20px 15px;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .link-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+            width: 100%;
+        }
+
+        .link-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .link-card-icon {
+            font-size: clamp(2.5rem, 6vw, 3rem);
+            margin-bottom: 15px;
+        }
+
+        .link-card h2 {
+            font-size: clamp(1.3rem, 3vw, 1.6rem);
+            margin: 0 0 12px 0;
+            color: #333;
+        }
+
+        .link-card p {
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            color: #666;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .stats-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px 15px;
+            margin: 20px auto;
+            max-width: 600px;
+            width: calc(100% - 30px);
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .stats-section h3 {
+            color: white;
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .visitor-counter {
+            display: inline-block;
+            margin-top: 8px;
+        }
+
+        .social-links {
+            margin: 20px auto;
+            text-align: center;
+            padding: 0 15px;
+            max-width: 600px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 8px;
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.95);
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-links a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-section {
+            text-align: center;
+            padding: 25px 15px 20px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-section p {
+            margin: 5px 0;
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
+        }
+
+        @media (max-width: 768px) {
+            .quick-links {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                gap: 15px;
+            }
+
+            .hero-section {
+                padding: 30px 10px 20px;
+            }
+
+            .link-card {
+                padding: 25px 15px;
+            }
+
+            .stats-section {
+                width: calc(100% - 20px);
+                margin: 15px auto;
+            }
+
+            .social-links a {
+                display: block;
+                max-width: 280px;
+                margin: 10px auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section {
+                padding: 25px 10px 15px;
+            }
+
+            .quick-links {
+                padding: 15px 10px;
+                gap: 12px;
+            }
+
+            .link-card {
+                padding: 20px 15px;
+            }
+
+            .stats-section {
+                padding: 15px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="nav">
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="music/index.html">Music</a></li>
+        <li><a href="videos/index.html">Videos</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+    <div class="container">
+        <div class="hero-section">
+            <h1>Welcome to Dabaski</h1>
+            <p class="tagline">Music Producer | Dubstep | LoFi Hip Hop | Color Bass</p>
+            <p class="subtitle">Pick your poison, traveler.</p>
+        </div>
+
+        <div class="quick-links">
+            <a href="music/index.html" class="link-card">
+                <div class="link-card-icon">🎵</div>
+                <h2>Music</h2>
+                <p>Explore my original tracks, albums, and remixes. From heavy dubstep to chill lofi beats.</p>
+            </a>
+
+            <a href="videos/index.html" class="link-card">
+                <div class="link-card-icon">🎬</div>
+                <h2>Videos</h2>
+                <p>Watch tutorials, behind-the-scenes content, and other creative projects.</p>
+            </a>
+
+            <a href="about.html" class="link-card">
+                <div class="link-card-icon">👤</div>
+                <h2>About</h2>
+                <p>Learn more about me, my journey, and how to connect.</p>
+            </a>
+        </div>
+
+        <div class="stats-section">
+            <h3>Visitor Counter</h3>
+            <div class="visitor-counter">
+                <a href='http://www.freevisitorcounters.com'>free visitor counters</a>
+                <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=ea1e9783686a47d852b99c9e59ab4c8509b69afd'></script>
+                <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1298527/t/0"></script>
+            </div>
+        </div>
+        <div class="footer-section">
+            <p>&copy; 2025 Dabaski. All rights reserved.</p>
+        </div>
+    </div>
+</div>
+</body>
+<!--
+Arrr, matey! Ye be a curious one, diggin' into the source code of me humble web page, aye? Well, shiver me timbers, ye've found yerself a hidden treasure—a message from the cap'n himself!
+Listen close, ye scallywag... this here site be built with blood, sweat, and a barrel o' rum. If ye be lookin' to plunder me code, remember the pirate's code: share the loot, give credit where it's due, and never leave a matey stranded.
+Now, if ye be a fellow coder, may yer bugs be few and yer coffee be strong. If ye be just passin' through, may the wind be at yer back and the code be ever in yer favor.
+
+Fair winds and followin' seas, ye landlubber! 🦜
+
+ - Cap'n Dabaski, the Code Corsair
+-->
+</html>

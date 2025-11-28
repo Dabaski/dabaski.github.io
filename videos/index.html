@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dabaski's Videos</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .content {
+            background: transparent;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        #videos {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 15px;
+        }
+
+        #videos h1 {
+            color: #fff;
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        #videos > p {
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .video-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .video-card iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+            display: block;
+        }
+
+        .video-card-content {
+            padding: 20px;
+        }
+
+        .video-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.3rem;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .video-card p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .video-card .category-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .video-card .watch-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .video-card .watch-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+    </style>
+</head>
+<body>
+<nav class="nav">
+    <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../music/index.html">Music</a></li>
+        <li><a href="index.html">Videos</a></li>
+        <li><a href="../about.html">About</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+    <div id="videos">
+        <h1>Videos</h1>
+        <p>Non-music content from the Dabaski YouTube channel</p>
+
+        <div class="video-grid">
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/QcjNL1FYCfY" allowfullscreen></iframe>
+                <div class="video-card-content">
+                    <h3>Video</h3>
+                    <p>Uploaded: August 15, 2025</p>
+                    <span class="category-tag">Video</span>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=QcjNL1FYCfY" class="watch-btn" target="_blank">Watch on YouTube</a>
+                </div>
+            </div>
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/N7pBFbz4Xx0" allowfullscreen></iframe>
+                <div class="video-card-content">
+                    <h3>Video</h3>
+                    <p>Uploaded: June 21, 2025</p>
+                    <span class="category-tag">Video</span>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=N7pBFbz4Xx0" class="watch-btn" target="_blank">Watch on YouTube</a>
+                </div>
+            </div>
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/gzLr59znN6I" allowfullscreen></iframe>
+                <div class="video-card-content">
+                    <h3>Video</h3>
+                    <p>Uploaded: May 17, 2025</p>
+                    <span class="category-tag">Video</span>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=gzLr59znN6I" class="watch-btn" target="_blank">Watch on YouTube</a>
+                </div>
+            </div>
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/a4klZEqnVSE" allowfullscreen></iframe>
+                <div class="video-card-content">
+                    <h3>Video</h3>
+                    <p>Uploaded: May 13, 2025</p>
+                    <span class="category-tag">Video</span>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=a4klZEqnVSE" class="watch-btn" target="_blank">Watch on YouTube</a>
+                </div>
+            </div>
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/PGIj7DNfyi8" allowfullscreen></iframe>
+                <div class="video-card-content">
+                    <h3>Video</h3>
+                    <p>Uploaded: January 3, 2022</p>
+                    <span class="category-tag">Video</span>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=PGIj7DNfyi8" class="watch-btn" target="_blank">Watch on YouTube</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
